@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
     <title>Mus World Ranking - El mejor jugador de todos los tiempos</title>
+    <script type="text/javascript" src="./src/app.js"></script>
   </head>
   <body>
     <div class="flex-container">
       <div><h1>Mus Word Ranking</h1></div>
     </div>
     <div>
-      <p>caracola</p>
+      <p>
+        Actualizado el día:
+        <span class="under">
+          <script>
+            document.write(fecha());
+          </script>
+        </span>
+      </p>
     </div>
   </body>
 </html>
