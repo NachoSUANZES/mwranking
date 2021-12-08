@@ -8,13 +8,14 @@ body {
   color: dimgray;
 }
 .flex-container {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .flex-container > div {
+  display: flex;
+  justify-content: center;
   background-color: #f1f1f1;
-  margin: 10px;
+  text-align: center;
   padding: 10px;
   font-size: 3em;
   color: var(--black);
@@ -29,16 +30,17 @@ p {
 }
 
 .flex-container2 {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .flex-container2 > div {
+  display: flex;
   justify-content: center;
   background-color: #f1f1f1;
+  text-align: center;
   padding: 10px;
   margin-bottom: 30px;
-  font-size: 1.5em;
+  font-size: 2em;
   color: var(--black);
 }
 
@@ -49,7 +51,7 @@ p {
 }
 .libros > div {
   flex-grow: 1;
-  margin: 0 0 0 5px;
+  margin: 10px 0 0 10px;
   width: calc(100% * (1 / 8) - 1px - 1px);
   /*margin: 10px;*/
   padding: 10px;
