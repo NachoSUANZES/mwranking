@@ -45,15 +45,13 @@ p {
 .libros {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 .libros > div {
-  display: inline-block;
   flex-grow: 1;
-  margin: 10px 0 0 2%;
-  width: calc(100% * (1 / 8) - 10px - 1px);
+  margin: 0 0 0 5px;
+  width: calc(100% * (1 / 8) - 1px - 1px);
   /*margin: 10px;*/
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(241, 240, 240);
 }
