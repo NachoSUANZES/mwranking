@@ -52,7 +52,7 @@ p {
   display: inline-block;
   flex-grow: 1;
   margin: 10px 0 0 2%;
-  width: calc(100% * (1 / 5) - 10px - 1px);
+  width: calc(100% * (1 / 6) - 10px - 1px);
   /*margin: 10px;*/
   padding: 20px;
   background-color: rgb(241, 240, 240);
