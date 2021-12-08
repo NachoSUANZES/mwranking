@@ -1,3 +1,12 @@
+/*Esto asegura que el tamaño de todos los elementos siempre 
+será modificado de la manera más intuitiva. */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 :root {
   --black: rgb(39 39 39 / 86%);
 }
