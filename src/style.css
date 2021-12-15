@@ -22,7 +22,6 @@ body {
 }
 
 .tabla {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -84,7 +83,7 @@ p {
   margin-bottom: 20px;
   border-collapse: collapse;
   border-spacing: 0;
-  width: 50%;
+  width: auto;
 }
 .tg td {
   border-color: gainsboro;
