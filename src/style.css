@@ -85,7 +85,7 @@ p {
   margin-bottom: 20px;
   border-collapse: collapse;
   border-spacing: 0;
-  width: calc(100% * (1 / 2) - 5px - 5px);
+  width: 600vmax;
 }
 .tg td {
   border-color: gainsboro;
