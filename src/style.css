@@ -20,6 +20,13 @@ body {
   font-size: 0.8em;
   color: dimgray;
 }
+
+.tabla {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .flex-container {
   width: 100%;
 }
@@ -77,19 +84,20 @@ p {
   margin-bottom: 20px;
   border-collapse: collapse;
   border-spacing: 0;
+  width: 800px;
 }
 .tg td {
-  border-color: black;
+  border-color: gainsboro;
   border-style: solid;
   border-width: 1px;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
-  padding: 10px 5px;
+  padding: 10px 10px;
   word-break: normal;
 }
 .tg th {
-  border-color: black;
+  border-color: gainsboro;
   border-style: solid;
   border-width: 1px;
   font-family: Arial, sans-serif;
@@ -101,13 +109,13 @@ p {
 }
 .tg .tg-baqh {
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .tg .tg-jwpn {
   background-color: #bfbfbf;
   color: #82354f;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .tg .tg-gtgr {
   background-color: #4931d3;
@@ -115,9 +123,9 @@ p {
   border-color: inherit;
   font-size: 16px;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: center;
 }
 .tg .tg-8d8j {
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
