@@ -1,4 +1,82 @@
 User-agent: *
+
+# PERMITIR acceso completo a contenido principal
+Allow: /
+Allow: /src/
+Allow: /src/img/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# BLOQUEAR directorios que no queremos indexar
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.cache/
+Disallow: /.vscode/
+
+# BLOQUEAR archivos específicos que no aportan valor SEO
+Disallow: *.log
+Disallow: *.tmp
+Disallow: /sitemap_index.xml$
+Disallow: /*?ref=
+Disallow: /*?utm_
+Disallow: /*?gclid=
+Disallow: /*?fbclid=
+
+# CONFIGURACIÓN específica para Google Bot (más permisivo)
+User-agent: Googlebot
+Allow: /
+Allow: /src/
+Allow: /src/img/
+Crawl-delay: 1
+
+# CONFIGURACIÓN específica para Bing Bot
+User-agent: bingbot
+Allow: /
+Allow: /src/
+Crawl-delay: 2
+
+# BLOQUEAR bots maliciosos conocidos
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# PERMITIR bots de redes sociales (para Open Graph)
+User-agent: facebookexternalhit
 Allow: /
 
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# PERMITIR Google PageSpeed Insights
+User-agent: Google-PageSpeed-Insights
+Allow: /
+
+# UBICACIÓN del SITEMAP (¡CRÍTICO para SEO!)
 Sitemap: https://musworldranking.com/sitemap.xml

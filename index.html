@@ -352,26 +352,16 @@
         vertical-align: middle;
       }
 
-      /* Champion Row */
       .champion-row {
-        background: linear-gradient(
-          135deg,
-          #fff9e6 0%,
-          #ffe6cc 100%
-        ) !important;
+        background: linear-gradient(135deg, #fff9e6 0%, #ffe6cc 100%);
+        border-left: 5px solid gold;
         position: relative;
       }
 
-      .champion-row::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 5px;
-        background: var(--gold-gradient);
+      .champion-row td {
+        font-weight: 700;
+        color: #b8860b;
       }
-
       .champion-row td {
         font-weight: 700;
         color: #b8860b;
@@ -775,11 +765,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr
-              class="champion-row"
-              itemscope
-              itemtype="https://schema.org/Person"
-            >
+            <tr class="champion-row">
               <td class="position-cell">
                 <div class="champion-position">1</div>
               </td>
@@ -791,12 +777,11 @@
                   loading="lazy"
                 />
               </td>
-              <td class="player-name" itemprop="name">
+              <td class="player-name">
                 <strong>Nacho Suanzes</strong>
-                <span class="sr-only">Campeón Mundial de Mus 2025</span>
               </td>
-              <td class="stats-cell" itemprop="gameStatistics">8.654</td>
-              <td class="stats-cell" itemprop="points">15.242</td>
+              <td class="stats-cell">8.654</td>
+              <td class="stats-cell">15.242</td>
             </tr>
             <tr itemscope itemtype="https://schema.org/Person">
               <td class="position-cell">2</td>
