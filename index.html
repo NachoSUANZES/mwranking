@@ -314,6 +314,11 @@
         margin: 0;
       }
 
+      .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
       .ranking-table {
         width: 100%;
         border-collapse: collapse;
@@ -352,16 +357,13 @@
         vertical-align: middle;
       }
 
+      /* Champion Row */
       .champion-row {
         background: linear-gradient(135deg, #fff9e6 0%, #ffe6cc 100%);
         border-left: 5px solid gold;
         position: relative;
       }
 
-      .champion-row td {
-        font-weight: 700;
-        color: #b8860b;
-      }
       .champion-row td {
         font-weight: 700;
         color: #b8860b;
@@ -604,65 +606,6 @@
         opacity: 0.7;
       }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        .subtitle {
-          font-size: 1.1rem;
-        }
-
-        .section-header h2 {
-          font-size: 2rem;
-        }
-
-        .books-grid {
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 20px;
-          padding: 30px 20px;
-        }
-
-        @media (max-width: 768px) {
-          .ranking-section {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-          }
-
-          .ranking-table {
-            min-width: 600px;
-            font-size: 0.85rem;
-          }
-
-          .ranking-table th,
-          .ranking-table td {
-            padding: 12px 8px;
-            white-space: nowrap;
-          }
-
-          .flag-img {
-            width: 25px;
-          }
-
-          .champion-position {
-            width: 35px;
-            height: 35px;
-            font-size: 0.9rem;
-          }
-        }
-
-        .footer-links {
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .modal-content {
-          max-width: 95%;
-          max-height: 90%;
-        }
-      }
-
       /* Loading Animation */
       @keyframes fadeInUp {
         from {
@@ -697,6 +640,75 @@
       .close-modal:focus {
         outline: 3px solid #ffd700;
         outline-offset: 2px;
+      }
+
+      /* Scroll Animations */
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+      }
+
+      .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+        }
+
+        .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .books-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          padding: 30px 20px;
+        }
+
+        .table-container {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .ranking-table {
+          min-width: 600px;
+          font-size: 0.85rem;
+        }
+
+        .ranking-table th,
+        .ranking-table td {
+          padding: 12px 8px;
+          white-space: nowrap;
+        }
+
+        .flag-img {
+          width: 25px;
+        }
+
+        .champion-position {
+          width: 35px;
+          height: 35px;
+          font-size: 0.9rem;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .modal-content {
+          max-width: 95%;
+          max-height: 90%;
+        }
       }
 
       /* Reduced motion preference */
@@ -738,18 +750,6 @@
           color: black;
         }
       }
-
-      /* Scroll Animations */
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.6s ease;
-      }
-
-      .scroll-reveal.revealed {
-        opacity: 1;
-        transform: translateY(0);
-      }
     </style>
   </head>
 
@@ -773,127 +773,129 @@
           <h2>Los Mejores Jugadores de Mus del Mundo</h2>
         </div>
 
-        <table class="ranking-table">
-          <thead class="table-header">
-            <tr>
-              <th>Posición</th>
-              <th>País</th>
-              <th>Jugador</th>
-              <th>Partidas Ganadas</th>
-              <th>Puntos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champion-row">
-              <td class="position-cell">
-                <div class="champion-position">1</div>
-              </td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2M2MEIxRSIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIHk9IjAuNjciIGZpbGw9IiNGRkM0MDAiLz48L3N2Zz4="
-                  alt="Bandera de España - Nacho Suanzes campeón mundial de Mus"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name">
-                <strong>Nacho Suanzes</strong>
-              </td>
-              <td class="stats-cell">8.654</td>
-              <td class="stats-cell">15.242</td>
-            </tr>
-            <tr itemscope itemtype="https://schema.org/Person">
-              <td class="position-cell">2</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiMwMDUzQTUiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
-                  alt="Bandera de Rusia - Borjian Paulov segundo en ranking Mus"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name" itemprop="name">Borjian Paulov</td>
-              <td class="stats-cell" itemprop="gameStatistics">3.654</td>
-              <td class="stats-cell" itemprop="points">7.242</td>
-            </tr>
-            <tr itemscope itemtype="https://schema.org/Person">
-              <td class="position-cell">3</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwN0ZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjAuODkiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4="
-                  alt="Bandera de Grecia - Gran Piparrigan tercer lugar ranking Mus mundial"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name" itemprop="name">Gran Piparrigan</td>
-              <td class="stats-cell" itemprop="gameStatistics">1.654</td>
-              <td class="stats-cell" itemprop="points">3.242</td>
-            </tr>
-            <tr itemscope itemtype="https://schema.org/Person">
-              <td class="position-cell">4</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwMjQ3RCIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjAuMzkiIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjIyIiB5PSIwLjc4IiBmaWxsPSIjQ0YxNDJCIi8+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMC4yMiIgeT0iMS4xNyIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjEuNTYiIGZpbGw9IiNDRjE0MkIiLz48L3N2Zz4="
-                  alt="Bandera Reino Unido - Albert Longest cuarto puesto Mus ranking"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name" itemprop="name">Albert Longest</td>
-              <td class="stats-cell" itemprop="gameStatistics">1.224</td>
-              <td class="stats-cell" itemprop="points">2.042</td>
-            </tr>
-            <tr itemscope itemtype="https://schema.org/Person">
-              <td class="position-cell">5</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwNTNBNSIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
-                  alt="Bandera Escocia - James Herrering quinto lugar ranking mundial Mus"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name" itemprop="name">James Herrering</td>
-              <td class="stats-cell" itemprop="gameStatistics">1.024</td>
-              <td class="stats-cell" itemprop="points">1.542</td>
-            </tr>
-            <tr itemscope itemtype="https://schema.org/Person">
-              <td class="position-cell">6</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI0ZGQzQwMCIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiMwMDY2NTEiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
-                  alt="Bandera Lituania - Mikele Stevanovich sexto ranking Mus global"
-                  class="flag-img"
-                  loading="lazy"
-                />
-              </td>
-              <td class="player-name" itemprop="name">Mikele Stevanovich</td>
-              <td class="stats-cell" itemprop="gameStatistics">824</td>
-              <td class="stats-cell" itemprop="points">1.002</td>
-            </tr>
-            <tr style="opacity: 0.6">
-              <td class="position-cell">...</td>
-              <td>...</td>
-              <td class="player-name">...</td>
-              <td class="stats-cell">...</td>
-              <td class="stats-cell">...</td>
-            </tr>
-            <tr style="opacity: 0.8">
-              <td class="position-cell">9.877.442</td>
-              <td>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwOTI0NiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjQ0UyQjM3Ii8+PC9zdmc+"
-                  alt="Italia"
-                  class="flag-img"
-                />
-              </td>
-              <td class="player-name">Raphelo Sarra</td>
-              <td class="stats-cell">0001</td>
-              <td class="stats-cell">0004</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="ranking-table">
+            <thead class="table-header">
+              <tr>
+                <th>Posición</th>
+                <th>País</th>
+                <th>Jugador</th>
+                <th>Partidas Ganadas</th>
+                <th>Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="champion-row">
+                <td class="position-cell">
+                  <div class="champion-position">1</div>
+                </td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2M2MEIxRSIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIHk9IjAuNjciIGZpbGw9IiNGRkM0MDAiLz48L3N2Zz4="
+                    alt="Bandera de España - Nacho Suanzes campeón mundial de Mus"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name">
+                  <strong>Nacho Suanzes</strong>
+                </td>
+                <td class="stats-cell">8.654</td>
+                <td class="stats-cell">15.242</td>
+              </tr>
+              <tr itemscope itemtype="https://schema.org/Person">
+                <td class="position-cell">2</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiMwMDUzQTUiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
+                    alt="Bandera de Rusia - Borjian Paulov segundo en ranking Mus"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name" itemprop="name">Borjian Paulov</td>
+                <td class="stats-cell" itemprop="gameStatistics">3.654</td>
+                <td class="stats-cell" itemprop="points">7.242</td>
+              </tr>
+              <tr itemscope itemtype="https://schema.org/Person">
+                <td class="position-cell">3</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwN0ZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjAuODkiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4="
+                    alt="Bandera de Grecia - Gran Piparrigan tercer lugar ranking Mus mundial"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name" itemprop="name">Gran Piparrigan</td>
+                <td class="stats-cell" itemprop="gameStatistics">1.654</td>
+                <td class="stats-cell" itemprop="points">3.242</td>
+              </tr>
+              <tr itemscope itemtype="https://schema.org/Person">
+                <td class="position-cell">4</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwMjQ3RCIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjAuMzkiIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjIyIiB5PSIwLjc4IiBmaWxsPSIjQ0YxNDJCIi8+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMC4yMiIgeT0iMS4xNyIgZmlsbD0iI0ZGRkZGRiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuMjIiIHk9IjEuNTYiIGZpbGw9IiNDRjE0MkIiLz48L3N2Zz4="
+                    alt="Bandera Reino Unido - Albert Longest cuarto puesto Mus ranking"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name" itemprop="name">Albert Longest</td>
+                <td class="stats-cell" itemprop="gameStatistics">1.224</td>
+                <td class="stats-cell" itemprop="points">2.042</td>
+              </tr>
+              <tr itemscope itemtype="https://schema.org/Person">
+                <td class="position-cell">5</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwNTNBNSIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
+                    alt="Bandera Escocia - James Herrering quinto lugar ranking mundial Mus"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name" itemprop="name">James Herrering</td>
+                <td class="stats-cell" itemprop="gameStatistics">1.024</td>
+                <td class="stats-cell" itemprop="points">1.542</td>
+              </tr>
+              <tr itemscope itemtype="https://schema.org/Person">
+                <td class="position-cell">6</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI0ZGQzQwMCIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiMwMDY2NTEiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjREMxNDNDIi8+PC9zdmc+"
+                    alt="Bandera Lituania - Mikele Stevanovich sexto ranking Mus global"
+                    class="flag-img"
+                    loading="lazy"
+                  />
+                </td>
+                <td class="player-name" itemprop="name">Mikele Stevanovich</td>
+                <td class="stats-cell" itemprop="gameStatistics">824</td>
+                <td class="stats-cell" itemprop="points">1.002</td>
+              </tr>
+              <tr style="opacity: 0.6">
+                <td class="position-cell">...</td>
+                <td>...</td>
+                <td class="player-name">...</td>
+                <td class="stats-cell">...</td>
+                <td class="stats-cell">...</td>
+              </tr>
+              <tr style="opacity: 0.8">
+                <td class="position-cell">9.877.442</td>
+                <td>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzIDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzAwOTI0NiIvPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjAuNjciIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB3aWR0aD0iMyIgaGVpZ2h0PSIwLjY3IiB5PSIxLjMzIiBmaWxsPSIjQ0UyQjM3Ii8+PC9zdmc+"
+                    alt="Italia"
+                    class="flag-img"
+                  />
+                </td>
+                <td class="player-name">Raphelo Sarra</td>
+                <td class="stats-cell">0001</td>
+                <td class="stats-cell">0004</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- Books Section -->
