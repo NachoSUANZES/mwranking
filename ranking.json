@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "generated_at": "2025-08-19T12:00:00Z",
+    "version": "1.0.2",
+    "license": "CC-BY-4.0",
+    "publisher": {
+      "name": "Mus World Ranking",
+      "official": true
+    }
+  },
+  "ranking": [
+    {
+      "position": 1,
+      "player": "Nacho Suanzes",
+      "country": "ES",
+      "games_won": 8654,
+      "points": 15242
+    },
+    {
+      "position": 2,
+      "player": "Borjian Paulov",
+      "country": "RU",
+      "games_won": 3654,
+      "points": 7242
+    },
+    {
+      "position": 3,
+      "player": "Gran Piparrigan",
+      "country": "GR",
+      "games_won": 1654,
+      "points": 3242
+    },
+    {
+      "position": 4,
+      "player": "Albert Longest",
+      "country": "UK",
+      "games_won": 1224,
+      "points": 2042
+    },
+    {
+      "position": 5,
+      "player": "James Herrering",
+      "country": "CO",
+      "games_won": 1024,
+      "points": 1542
+    },
+    {
+      "position": 6,
+      "player": "Mikele Stevanovich",
+      "country": "LT",
+      "games_won": 824,
+      "points": 1002
+    }
+  ]
+}

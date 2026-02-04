@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reglas Oficiales del Ranking - Mus World Ranking</title>
+    <meta name="description"
+        content="Reglamento oficial del sistema de puntuación Mus World Ranking. Normativa ELO-Mus, caducidad de puntos y criterios de desempate." />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <section class="hero-section" style="padding: 50px 20px;">
+        <div class="hero-content fade-in">
+            <h1>Reglamento Oficial</h1>
+            <p class="subtitle"><a href="../index.html" style="color:white;">Inicio</a> > Reglas</p>
+        </div>
+    </section>
+
+    <div class="container" style="margin-top: -30px;">
+        <section class="content-section">
+            <h2>1. Sistema de Puntuación (ELO-Mus)</h2>
+            <p>El Mus World Ranking utiliza una adaptación del sistema ELO (probado en ajedrez) optimizado para juegos
+                de parejas con información imperfecta. La fórmula base es:</p>
+            <div
+                style="background: #f8f9fa; padding: 15px; border-left: 4px solid var(--accent-blue); font-family: monospace; margin: 15px 0;">
+                Rn = Ro + K * (W - We)
+            </div>
+            <p>Donde:</p>
+            <ul>
+                <li><strong>Rn:</strong> Nuevo Ranking.</li>
+                <li><strong>Ro:</strong> Ranking actual.</li>
+                <li><strong>K:</strong> Coeficiente de torneo (K=40 para Mundiales, K=20 para Masters, K=10 para Open).
+                </li>
+                <li><strong>W:</strong> Resultado real (1 victoria, 0 derrota).</li>
+                <li><strong>We:</strong> Resultado esperado basado en la diferencia de ranking previa.</li>
+            </ul>
+
+            <h3>1.1 Bonus por "31 a la mano"</h3>
+            <p>Se otorgan puntos decimales (0.001) adicionales por cada juego ganado con "31 a la mano", servidos como
+                criterio de desempate técnico.</p>
+
+            <h2>2. Caducidad de Puntos</h2>
+            <p>Para asegurar que el ranking refleje el estado de forma actual:</p>
+            <ul>
+                <li>Los puntos obtenidos en torneos tienen una validez de <strong>52 semanas</strong> (1 año
+                    calendario).</li>
+                <li>Pasado este tiempo, se aplica un factor de degradación del 50% durante los siguientes 6 meses.</li>
+                <li>A los 18 meses, los puntos expiran completamente.</li>
+            </ul>
+
+            <h2>3. Categorización de Torneos</h2>
+            <p>El Comité de Torneos asigna categorías basadas en:</p>
+            <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+                <thead style="background: #eee;">
+                    <tr>
+                        <th style="padding:10px; border:1px solid #ddd;">Categoría</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Requisitos</th>
+                        <th style="padding:10px; border:1px solid #ddd;">Factor K</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">Grand Slam</td>
+                        <td style="padding:10px; border:1px solid #ddd;">+500 Parejas, Presencia Internacional</td>
+                        <td style="padding:10px; border:1px solid #ddd;">50</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">Master 1000</td>
+                        <td style="padding:10px; border:1px solid #ddd;">+200 Parejas, Árbitros Federados</td>
+                        <td style="padding:10px; border:1px solid #ddd;">40</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px; border:1px solid #ddd;">Open Regional</td>
+                        <td style="padding:10px; border:1px solid #ddd;">+50 Parejas</td>
+                        <td style="padding:10px; border:1px solid #ddd;">20</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>4. Sanciones</h2>
+            <p>El incumplimiento del código de ética (señas falsas fuera de las permitidas, insultos, etc.) conlleva la
+                pérdida inmediata de puntos del ranking vigente.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h4>Mus World Ranking</h4>
+            <p>Autoridad Oficial de Clasificación</p>
+            <div class="copyright">
+                <p>&copy; 2025 Mus World Ranking.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
