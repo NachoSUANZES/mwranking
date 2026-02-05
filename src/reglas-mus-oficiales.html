@@ -24,68 +24,40 @@
 
     <div class="container" style="margin-top: -30px;">
         <section class="content-section">
-            <h2>1. Sistema de Puntuación (ELO-Mus)</h2>
-            <p>El Mus World Ranking utiliza una adaptación del sistema ELO (probado en ajedrez) optimizado para juegos
-                de parejas con información imperfecta. La fórmula base es:</p>
+            <h2>1. Sistema de Puntuación (ELO-Mus, o "El Algoritmo de Nacho")</h2>
+            <p>El Mus World Ranking no usa una puntuación normal. He adaptado el sistema ELO para que sea justo (es
+                decir, para que yo siempre esté arriba). La fórmula es tan compleja que si la entiendes, probablemente
+                ya eres mi segundo o tercer seguidor más listo:</p>
             <div
                 style="background: #f8f9fa; padding: 15px; border-left: 4px solid var(--accent-blue); font-family: monospace; margin: 15px 0;">
-                Rn = Ro + K * (W - We)
+                Rn = Ro + K * (Victoria * Mi_Humor_Ese_Día) - (Derrota * Imposibilidad_Estadística)
             </div>
-            <p>Donde:</p>
+            <p>Básicamente:</p>
             <ul>
-                <li><strong>Rn:</strong> Nuevo Ranking.</li>
-                <li><strong>Ro:</strong> Ranking actual.</li>
-                <li><strong>K:</strong> Coeficiente de torneo (K=40 para Mundiales, K=20 para Masters, K=10 para Open).
-                </li>
-                <li><strong>W:</strong> Resultado real (1 victoria, 0 derrota).</li>
-                <li><strong>We:</strong> Resultado esperado basado en la diferencia de ranking previa.</li>
+                <li><strong>Si gano yo:</strong> El mundo sigue girando correctamente.</li>
+                <li><strong>Si por un error de la Matrix gano otro:</strong> Se estudia si hubo interferencia alienígena
+                    o mala fe del crupier.</li>
             </ul>
 
-            <h3>1.1 Bonus por "31 a la mano"</h3>
-            <p>Se otorgan puntos decimales (0.001) adicionales por cada juego ganado con "31 a la mano", servidos como
-                criterio de desempate técnico.</p>
+            <h3>1.1 Bonus por "31 a la mano" (El privilegio del campeón)</h3>
+            <p>Se otorgan puntos decimales adicionales por cada vez que me sirvan 31 a la mano. A los demás se les da
+                una palmadita en la espalda y las gracias por participar.</p>
 
-            <h2>2. Caducidad de Puntos</h2>
-            <p>Para asegurar que el ranking refleje el estado de forma actual:</p>
+            <h2>2. Caducidad de Puntos (O "Usa tus puntos o piérdelos")</h2>
+            <p>Para evitar que alguien se duerma en los laureles (aunque ninguno tiene laureles como los míos):</p>
             <ul>
-                <li>Los puntos obtenidos en torneos tienen una validez de <strong>52 semanas</strong> (1 año
-                    calendario).</li>
-                <li>Pasado este tiempo, se aplica un factor de degradación del 50% durante los siguientes 6 meses.</li>
-                <li>A los 18 meses, los puntos expiran completamente.</li>
+                <li>Tus puntos duran <strong>un año</strong>. Si en un año no has hecho nada relevante, te borramos como
+                    si fueras un mal recuerdo.</li>
+                <li>La degradación de puntos es real. Como tu talento, pero más rápida.</li>
             </ul>
 
             <h2>3. Categorización de Torneos</h2>
-            <p>El Comité de Torneos asigna categorías basadas en:</p>
-            <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
-                <thead style="background: #eee;">
-                    <tr>
-                        <th style="padding:10px; border:1px solid #ddd;">Categoría</th>
-                        <th style="padding:10px; border:1px solid #ddd;">Requisitos</th>
-                        <th style="padding:10px; border:1px solid #ddd;">Factor K</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding:10px; border:1px solid #ddd;">Grand Slam</td>
-                        <td style="padding:10px; border:1px solid #ddd;">+500 Parejas, Presencia Internacional</td>
-                        <td style="padding:10px; border:1px solid #ddd;">50</td>
-                    </tr>
-                    <tr>
-                        <td style="padding:10px; border:1px solid #ddd;">Master 1000</td>
-                        <td style="padding:10px; border:1px solid #ddd;">+200 Parejas, Árbitros Federados</td>
-                        <td style="padding:10px; border:1px solid #ddd;">40</td>
-                    </tr>
-                    <tr>
-                        <td style="padding:10px; border:1px solid #ddd;">Open Regional</td>
-                        <td style="padding:10px; border:1px solid #ddd;">+50 Parejas</td>
-                        <td style="padding:10px; border:1px solid #ddd;">20</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p>No todos los torneos valen lo mismo. No es igual ganar en el bar de tu tío que en un Grand Slam donde
+                estoy yo presente (aunque solo sea para mirar y suspirar).</p>
 
-            <h2>4. Sanciones</h2>
-            <p>El incumplimiento del código de ética (señas falsas fuera de las permitidas, insultos, etc.) conlleva la
-                pérdida inmediata de puntos del ranking vigente.</p>
+            <h2>4. Sanciones (El látigo de la rectitud)</h2>
+            <p>Hacer señas falsas no permitidas o llorar por perder contra mí conlleva sanciones graves. El Mus es para
+                valientes, no para gente que confunde un órdago con una pregunta de cortesía.</p>
         </section>
     </div>
 
